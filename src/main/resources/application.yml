@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  mongodb:
+    embedded:
+      version: 3.4.8
+  security:
+    oauth2:
+      client:
+        registration:
+          spotifyclient:
+            client-id: {Spotify_client_id}
+            client-secret: {Spotify_secret}
+            authorization-grant-type: client_credentials
+        provider:
+          spotifyclient:
+            issuer-uri: https://accounts.spotify.com
+            token-uri: https://accounts.spotify.com/api/token
+spotify:
+  api-url: https://api.spotify.com/v1
+
+
+

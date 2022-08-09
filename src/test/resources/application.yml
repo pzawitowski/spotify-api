@@ -1,0 +1,25 @@
+server:
+  port: 8081
+spring:
+  mongodb:
+    embedded:
+      version: 3.2.8
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/spotifytest
+  main:
+    allow-bean-definition-overriding: true
+  security:
+    oauth2:
+      client:
+        registration:
+          spotifyclient:
+            client-id: TestID
+            client-secret: TestSecret
+            authorization-grant-type: client_credentials
+        provider:
+          spotifyclient:
+            issuer-uri: https://accounts.spotify.com
+            token-uri: https://accounts.spotify.com/api/token
+spotify:
+  api-url: http://localhost:9099/v1
